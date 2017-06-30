@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cabin: Thoroughly Learn React and Redux with this example app</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="This example application created by getstream.io teaches you how to to build an Instagram style application with activity streams and newsfeeds.">
+    <meta name="keywords" content="redux javascript, redux example app, redux http request, keen.io, algolia search, react js ui, javascript, nodejs, redux with react router, react js pagination, reactjs mobile, react js rest api">
+
+    <meta property="og:title" content="Cabin - A React/Redux Tutorial Series by GetStream.io">
+    <meta property="og:site_name" content="Cabin - A React/Redux Tutorial Series by GetStream.io">
+    <meta property="og:url" content="http://cabin.getstream.io">
+    <meta property="og:description" content="This example application created by getstream.io teaches you how to to build an Instagram style application with activity streams and newsfeeds.">
+    <meta property="fb:app_id" content="1714548178824131">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://cabin.getstream.io/img/og_cabin.png" />
+
+    <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  	<link rel="stylesheet" href="css/demo.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:500,600,400|Anonymous+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-48587325-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body class="demo">
+  <div class="github">
+    <a class="github-button" href="https://github.com/getstream/stream-react-example" data-style="mega" data-count-href="/getstream/stream-react-example/stargazers" data-count-api="/repos/getstream/stream-react-example#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star getstream/stream-react-example on GitHub" title="GitHub">Star</a>
+  </div>
+	<div class="wrapper">
+            <input type="checkbox" id="navigation" />
+            <label htmlFor="navigation">
+                <svg width="66px" height="66px" viewBox="17 13 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+                    <desc>Created with Sketch.</desc>
+                    <defs>
+                        <circle id="path-1" cx="25" cy="25" r="25"></circle>
+                        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+                            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.491140172 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                        </filter>
+                    </defs>
+                    <g id="menu-btn" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(25.000000, 19.000000)">
+                        <circle id="Oval-16" fill="#000000" cx="25.5" cy="33.5" r="17.5"></circle>
+                        <g id="Oval-16">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#12E67F" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <path d="M13,18 L37,18 L37,20 L13,20 L13,18 Z M13,24 L37,24 L37,26 L13,26 L13,24 Z M13,30 L37,30 L37,32 L13,32 L13,30 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                    </g>
+                </svg>
+            </label>
+            <nav>
+
+                <ul>
+                    <li class="logo-nav text-centered">
+                        <a href="/" title="Cabin">
+                            <img src="img/Logo.svg" alt="Cabin Logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/GetStream/stream-react-example" class="btn nav-btn" outline target="_blank" title="GitHub">GITHUB</a>
+                        <a href="https://getstream.io" class="btn nav-btn" primary target="_blank" title="GetStream.io">Get Stream</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.getstream.io/cabin-react-redux-example-app-react" target="_blank" title="Cabin - React"><img src="img/reactlogo.svg" width="18" alt="React" /> Step One &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.getstream.io/cabin-react-redux-example-app-redux" target="_blank" title="Cabin - Redux"><img src="img/reduxlogo.svg" width="18" alt="Redux" />Step Two &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.getstream.io/cabin-react-redux-example-app-stream/" target="_blank" title="Cabin - Stream"><img src="img/streamlogo.svg" width="18" alt="GetStream.io" />Step Three &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.getstream.io/cabin-react-redux-example-app-imgix/" target="_blank" title="Cabin - Imgix"><img src="img/imgix_small_logo.svg" width="16" alt="Imgix" />Step Four &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.getstream.io/cabin-react-redux-example-app-keen/" target="_blank" title="Cabin - Keen.io"><img src="img/keenlogo.svg" width="16" alt="Keen.io" />Step Five &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.getstream.io/cabin-react-redux-example-app-algolia/" target="_blank" title="Cabin - Algolia"><img src="img/algolialogo.svg" width="16" alt='Algolia' />Step Six &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.getstream.io/cabin-react-redux-example-app-mapbox/" target="_blank" title="Cabin - Mapbox"><img src="img/mapboxlogo.svg" width="16" alt="Mapbox" />Step Seven &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-a-node-js-app-using-terraform-on-ubuntu-14-04" title="DigitalOcean"><img src="img/digitaloceanlogo.svg" width="16" alt="DigitalOcean" />Step Eight &rarr;</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.getstream.io/react-redux-best-practices-gotchas/" target="_blank" title="React/Redux Best Practices">Bonus &rarr;</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <row centered>
+
+                <column cols="4">
+                  <div class="project-info aligner">
+                    <div>
+                    <h6 class=" animated zoomIn">BROUGHT TO YOU BY <a href="//getstream.io" target="_blank" title="GetStream.io">GETSTREAM.IO</a></h6>
+                    <h1 class="animated zoomIn">Learn React &amp; Redux  With Cabin</h1>
+                      <p class="animated zoomIn">This demo is the end result of our tutorial series that teaches you how to structure a full stack Javascript Application that is made powerful and scalable through services like Stream, Algolia, Mapbox, Keen and Imgix.</p>
+                      </div>
+                  </div>
+
+                </column>
+                <column cols="7">
+                    <div class="aligner">
+                        <div class="frame">
+                            <iframe class="main-frame" src="http://cabin.getstream.io:3000" width="410" height="730" seamless scrollbar="no" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </column>
+
+            </row>
+            <row class="meta">
+                <column class="text-centered">
+                    &copy; 2016 <a href="https://getstream.io" target="_blank" title="GetStream.io">Stream.io</a> INC    |    A Techstars NYC Company    |    Proudly Built in Boulder and Amsterdam
+                </column>
+                <column cols="2" offset="2">
+                  <div class="social right">
+                    <a href="https://twitter.com/getstream_io" target="_blank" title="Twitter">
+                      <img src="img/twitter.svg" alt="Twitter" />
+                    </a>
+                    <a href="https://github.com/GetStream" target="_blank" title="GitHub">
+                      <img src="img/github.svg" alt="GitHub" />
+                    </a>
+                    <a class="last" href="https://plus.google.com/107168613155747146780" target="_blank" title="Google Plus">
+                      <img src="img/gplus.svg" alt="Google Plus" />
+                    </a>
+                  </div>
+
+                </column>
+
+      </row>
+
+	</div>
+    <script type="text/javascript">
+      <!--
+      if (screen.width <= 768) {
+        window.location = "http://cabin.getstream.io:3000";
+      }
+      //-->
+    </script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

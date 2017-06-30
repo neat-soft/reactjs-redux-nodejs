@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cabin: Thoroughly Learn React and Redux with this example app</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="This example application created by getstream.io teaches you how to to build an Instagram style application with activity streams and newsfeeds.">
+    <meta name="keywords" content="react js course, react and redux, react router, redux reducer, react upload, react javascript, redux javascript, react tutorial, redux architecture, react stream, react webpack, redux infinite scroll">
+
+    <meta property="og:title" content="Cabin - A React/Redux Tutorial Series by GetStream.io">
+    <meta property="og:site_name" content="Cabin - A React/Redux Tutorial Series by GetStream.io">
+    <meta property="og:url" content="http://cabin.getstream.io">
+    <meta property="og:description" content="This example application created by getstream.io teaches you how to to build an Instagram style application with activity streams and newsfeeds.">
+    <meta property="fb:app_id" content="1714548178824131">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://cabin.getstream.io/img/og_cabin.png" />
+
+    <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:500,600,400|Anonymous+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/cabin.js"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-48587325-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+  <div class="wrap">
+
+    <section class="hero">
+
+        <div class="art animated fadeIn"></div>
+
+        <row class="header animated fadeInDown">
+          <column cols="2" class="logo">
+            <img src="img/Logo.svg" alt="Cabin Logo">
+          </column>
+
+          <column cols="10">
+            <div class="right">
+              <a href="/demo" class="btn" small outline title="Demo">DEMO</a>
+              <!-- <a href="https://github.com/GetStream/stream-react-example" class="btn" outline target="_blank">GITHUB</a> -->
+              <!-- Place this tag where you want the button to render. -->
+
+              <a class="github-button" href="https://github.com/getstream/stream-react-example" data-style="mega" data-count-href="/getstream/stream-react-example/stargazers" data-count-api="/repos/getstream/stream-react-example#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star getstream/stream-react-example on GitHub">Star</a>
+            </div>
+          </column>
+        </row>
+
+      <row class="content">
+        <column cols="7">
+          <img src="img/hero-react-redux.svg" width="194" height="71" class=" animated zoomIn" alt="React and Redux"/>
+
+          <h6 class=" animated zoomIn">BROUGHT TO YOU BY <a href="//getstream.io" target="_blank" title="GetStream.io">GETSTREAM.IO</a></h6>
+
+          <h1 class="animated zoomIn">Learn React &amp; Redux  With Cabin</h1>
+            <p class="animated zoomIn">These 7 tutorials teach you how to build a feature-rich, scalable social network app using React and Redux. The first 6 tutorials are available today. Enter your email to stay up to date about the upcoming posts:</p>
+
+          <form autocomplete="off" method="#" action="#" class="forms animated zoomIn updates-1">
+              <div class="btn-append">
+                <input type="email" name="email" class="input-big" placeholder="Enter Your Email" required="required" />
+                <span>
+                    <button class="btn submit-updates-1" type="white" big>SUBMIT</button>
+                </span>
+
+              </div>
+          </form>
+          <span class="subscribe white">Stay updated about new tutorials &nearr; </span>
+          <a href="#partner" class="hero-jump" title="Partners">&nbsp;</a>
+
+        </column>
+        <column cols="4">
+          &nbsp;
+        </column>
+
+      </row>
+
+    </section>
+    <!-- <row centered>
+      <a href="#partner" class="hero-jump">&nbsp;</a>
+    </row> -->
+
+    <section id="partner" class="partners">
+      <row centered>
+        <column cols="10" class="card animated fadeIn">
+          <span class="label text-centered">Maximizing Efficiency</span>
+          <h2>Built With These Great Services</h2>
+          <p>Cabin is built using React and Redux. Stream powers the feed technology, Algolia search, Mapbox the custom maps, Keen analytics and ImgIX the image resizing. These APIs are powerful and scalable and allow you to build a fully featured app.</p>
+          <img src="img/partners-flare.png" alt="API Partners" />
+        </column>
+      </row>
+      <row centered>
+        <span class="label text-centered shim">TOPICS COVERED</span>
+      </row>
+
+    </section>
+
+    <section class="topics">
+      <row centered>
+        <h1>Getting Started</h1>
+      </row>
+      <row centered>
+        <ul>
+          <a href="http://blog.getstream.io/cabin-react-redux-example-app-introduction" class="btn green" target="_blank" title="Cabin Tutorial - Step 1">Step 1 &rarr;</a>
+          <li>Full-Stack Node &amp; React Application Structure</li>
+          <li>Webpack Overview &amp; Basics</li>
+        </ul>
+      </row>
+      <!-- <row centered class="shim">
+        <form autocomplete="off" method="#" action="#" class="forms updates-2">
+              <div class="btn-append">
+                <input type="email" name="search" class="input-big" placeholder="Enter Your Email to Stay Updated" required="required" />
+                  <span>
+                    <button class="btn submit-updates-2" type="white" big>SUBMIT</button>
+                </span>
+              </div>
+          </form>
+      </row> -->
+
+      <row>
+        <column cols="4" offset="2" class="text-centered">
+          <img src="img/reactlogo.svg" width="40" height="36" alt="React logo" />
+          <h3>React</h3>
+          <ul>
+            <a href="http://blog.getstream.io/cabin-react-redux-example-app-react" class="btn green" target="_blank" title="Cabin Tutorial - Step 2">Step 2 &rarr;</a>
+            <li>History &amp; Philosophy of <a href="https://facebook.github.io/react/" target="_blank">React</a></li>
+            <li>JSX Overview &amp; Basics</li>
+            <li>React Components, In-Depth</li>
+          </ul>
+        </column>
+
+        <column cols="4" class="text-centered">
+          <img src="img/reduxlogo.svg" width="37" height="35" alt="Redux logo" />
+          <h3>Redux</h3>
+          <ul>
+            <a href="http://blog.getstream.io/cabin-react-redux-example-app-redux" class="btn green" target="_blank" title="Cabin Tutorial - Step 3">Step 3 &rarr;</a>
+            <li><a href="http://redux.js.org/" target="_blank">Redux</a> Overview</li>
+            <li>State vs DOM Manipulation</li>
+            <li>Redux Fundamentals</li>
+            <li>Reducers &amp; Actions</li>
+          </ul>
+        </column>
+
+      </row>
+
+      <row>
+        <column cols="11" offset="1">
+        <span class="clicktweet text-centered">Tweet: "Cabin: Free Fully Functioning React &amp; Redux App with Tutorials: http://bit.ly/1VtuQ1R"</span>
+          <a href="https://twitter.com/intent/tweet?text=Cabin%3A%20free%20fully%20functioning%20React%20%26%20Redux%20app%20with%20tutorials%20http%3A%2F%2Fbit.ly%2F1VtuQ1R" target="_blank" class="twittercta">Click To Tweet</a>
+        </columns>
+      </row>
+
+      <row>
+        <column cols="4" offset="2" class="text-centered">
+          <img src="img/streamlogo.svg" width="56" height="28" alt="Stream logo" />
+          <h3>Feeds</h3>
+          <ul>
+            <a href="http://blog.getstream.io/cabin-react-redux-example-app-stream/" class="btn green" target="_blank" title="Cabin Tutorial - Step 4">Step 4 &rarr;</a>
+            <li>Feeds powered by <a href="//getstream.io" target="_blank">Getstream.io</a></li>
+            <li>Stream Overview</li>
+            <li>Adding Activities</li>
+            <li>Enriching Data</li>
+            <li>Aggregation</li>
+            <li>Realtime Notifications</li>
+          </ul>
+        </column>
+
+        <column cols="4" class="text-centered">
+          <img src="img/imgixlogo.svg" width="91" height="34" alt="Imgix logo" />
+          <h3>Image Processing</h3>
+          <ul>
+            <a href="http://blog.getstream.io/cabin-react-redux-example-app-imgix/" class="btn green" target="_blank" title="Cabin Tutorial - Step 5">Step 5 &rarr;</a>
+            <li>Image hosting by <a href="https://imgix.com" target="_blank">ImgIx.com</a></li>
+            <li>Setup</li>
+            <li>Image Adjustments</li>
+            <li>Instagram-Like Filters</li>
+          </ul>
+        </column>
+
+    </row>
+      <row>
+
+          <column cols="4" offset="2" class="text-centered">
+            <img src="img/keenlogo.svg" width="35" height="30" alt="Keen logo" />
+            <h3>Analytics</h3>
+            <ul>
+              <a href="http://blog.getstream.io/cabin-react-redux-example-app-keen/" class="btn green" target="_blank" title="Cabin Tutorial - Step 6">Step 6 &rarr;</a>
+              <li>Analytics with <a href="https://keen.io/" target="_blank">Keen</a></li>
+              <li>State vs DOM Manipulation</li>
+              <li>Redux Fundamentals</li>
+              <li>Reducers &amp; Actions</li>
+            </ul>
+          </column>
+
+        <column cols="4" class="text-centered">
+          <img src="img/algolialogo.svg" width="33" height="37" alt="Algolia logo" />
+          <h3>Search</h3>
+          <ul>
+            <a href="http://blog.getstream.io/cabin-react-redux-example-app-algolia/" class="btn green" target="_blank" title="Cabin Tutorial - Step 7">Step 7 &rarr;</a>
+            <li>Search powered by <a href="https://algolia.com" target="_blank">Algolia</a></li>
+            <li>Overview of Algolia</li>
+            <li>Implementing Server Side</li>
+            <li>Implementing Client Side</li>
+            <li>Awesome Search Options</li>
+          </ul>
+        </column>
+
+      </row>
+      <row>
+        <column cols="4" offset="2" class="text-centered">
+          <img src="img/mapboxlogo.svg" width="86" height="24" alt="Mapbox logo" />
+          <h3>Maps</h3>
+          <ul>
+            <a href="http://blog.getstream.io/cabin-react-redux-example-app-mapbox/" class="btn green" target="_blank">Step 8 &rarr;</a>
+            <li>Custom maps with <a href="https://mapbox.com" target="_blank">Mapbox.com</a></li>
+            <li>Client &amp; Server Side Setups</li>
+            <li>Integration Tips</li>
+            <li>Mapbox Product Breakdowns</li>
+          </ul>
+        </column>
+        <column cols="4" class="text-centered">
+          <img src="img/digitaloceanlogo.svg" width="54" height="30" alt="DigitalOcean logo" />
+          <h3>Cloud Server</h3>
+          <ul>
+            <a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-a-node-js-app-using-terraform-on-ubuntu-14-04" class="btn green" target="_blank">Step 9 &rarr;</a>
+            <li>Hosting through <a href="https://www.digitalocean.com/" target="_blank" title="DigitalOcean">DigitalOcean</a></li>
+            <li>Automating Deployments</li>
+            <li>Process Management with <a href="http://pm2.keymetrics.io/" target="_blank" title="PM2">pm2</a></li>
+            <li><a href="https://www.terraform.io/" target="_blank" title="Terraform">Terraform</a> Configuration</li>
+          </ul>
+        </column>
+      </row>
+
+      <row centered>
+        <column cols="12" class="text-centered">
+          <img src="img/bonus.svg" width="129" height="98" class="bonus-img" alt="Stream Bonus logo"/>
+        </column>
+      </row>
+      <row centered>
+
+     <column cols="12" class="text-centered">
+        <span class="text-centered bonus-title">React/Redux - Best Practices &amp; Gotchas</span>
+        </column>
+
+      </row>
+
+      <row centered>
+        <ul>
+          <a href="http://blog.getstream.io/react-redux-best-practices-gotchas/" class="btn green" target="_blank">Go To Bonus &rarr;</a>
+          <li>Clearly articulate best practices when it comes to <a href="https://facebook.github.io/react/" target="_blank">React</a> &amp; <a href="http://redux.js.org/index.html" target="_blank">Redux</a></li>
+          <li>Avoid common React/Redux pitfalls</li>
+          <li>Structure a production level application that can scale</li>
+          <li>Utilize tools such as <a href="https://facebook.github.io/immutable-js/" target="_blank">Immutable.js</a>, <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en" target="_blank">Chrome's React developer tools</a>, and middleware, such as <a href="https://github.com/getsentry/raven-js" target="_blank">Raven</a></li>
+          <li>Understand the React event system</li>
+          <li><a href="http://webpack.github.io/" target="_blank" title="Webpack">Webpack</a> overview &amp; basics</li>
+
+        </ul>
+      </row>
+
+    </section>
+
+    <section class="end">
+        <img src="img/end-bg.png" alt="Background image" />
+      <row centered>
+        <a href="https://github.com/GetStream/stream-react-example" class="btn primary" title="GitHub">GITHUB</a>
+      </row>
+      <row centered>
+        <a href="/demo" class="demo" title="Demo">DEMO</a>
+      </row>
+
+    </section>
+
+    <footer>
+      <row centered>
+        <span class="label text-centered">DESIGN KIT</span>
+      </row>
+      <row centered>
+          <h2 class="text-centered">Get the Design Assets</h2>
+      </row>
+      <row centered>
+        <form autocomplete="off" method="#" action="#" class="forms auto-center sketch-1">
+              <div class="btn-append">
+                <input type="email" name="email" class="input-big" placeholder="Enter Your Email" required="required" />
+                  <span>
+                    <button class="btn submit-sketch-1" type="white" big>DOWNLOAD NOW</button>
+                </span>
+              </div>
+          </form>
+      </row>
+      <row class="meta">
+        <column cols="7">
+          &copy; 2016 Stream.io INC    |    A Techstars NYC Company    |    Proudly Built in Boulder and Amsterdam
+        </column>
+        <column cols="2" offset="2">
+          <div class="social right">
+            <a href="https://twitter.com/getstream_io" target="_blank" title="Twitter">
+              <img src="img/twitter.svg" alt="Twitter"/>
+            </a>
+            <a href="https://github.com/GetStream" target="_blank" title="GitHub">
+              <img src="img/github.svg" alt="GitHub" />
+            </a>
+            <a class="last" href="https://plus.google.com/107168613155747146780" target="_blank" title="Google Plus">
+              <img src="img/gplus.svg" alt="Google Plus" />
+            </a>
+          </div>
+
+        </column>
+
+      </row>
+
+    </footer>
+
+  </div>
+
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
